@@ -1,4 +1,4 @@
 
   export const environments = {
-    api_base_url: "http://localhost:3000/api",
+    api_base_url: "https://pokemon-api-production-b559.up.railway.app/api",
   }

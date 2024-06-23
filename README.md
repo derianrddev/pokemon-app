@@ -61,3 +61,8 @@ Ensure you have the following installed on your system:
 
 - Angular
 - Tailwind CSS
+
+## Links
+
+- Solution URL: [Solution URL here](https://github.com/derianrddev/pokemon-app)
+- Live Site URL: [Live site URL here](https://pokemon-app-derian.netlify.app/)
