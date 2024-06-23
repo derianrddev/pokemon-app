@@ -17,6 +17,7 @@ Ensure you have the following installed on your system:
    ```bash
    git clone https://github.com/derianrddev/pokemon-app.git
    cd pokemon-app
+   ```
 
 2. Install Dependencies
 
@@ -29,15 +30,32 @@ Ensure you have the following installed on your system:
 4. Fill the environment variables accordingly
 
 5. Create Angular Envs (optional)
-```
-npm run envs
-```
+
+  ```bash
+  npm run envs
+  ```
 
 6. For development run:
-```
-npm start
-```
 
+  ```bash
+  npm start
+  ```
+
+## Running the Tests
+
+1. Ensure the application is running:
+
+   ```bash
+   npm start
+   ```
+
+2. In another terminal, run Cypress:
+
+   ```bash
+   npm run e2e
+   ```
+
+3. Run the tests in the Cypress UI.
 
 ## Technologies
 

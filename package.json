@@ -7,7 +7,8 @@
     "start": "npm run envs && ng serve -o",
     "build": "npm run envs && ng build",
     "watch": "ng build --watch --configuration development",
-    "test": "ng test"
+    "test": "ng test",
+    "e2e": "npx cypress open"
   },
   "private": true,
   "dependencies": {
@@ -27,8 +28,10 @@
     "@angular-devkit/build-angular": "^17.3.3",
     "@angular/cli": "^17.3.3",
     "@angular/compiler-cli": "^17.3.0",
+    "@nestjs/testing": "^10.3.9",
     "@types/jasmine": "~5.1.0",
     "autoprefixer": "^10.4.19",
+    "cypress": "^13.12.0",
     "dotenv": "^16.4.5",
     "jasmine-core": "~5.1.0",
     "karma": "~6.4.0",
