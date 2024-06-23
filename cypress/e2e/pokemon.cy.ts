@@ -19,7 +19,7 @@ describe('Pokémon App', () => {
   });
 
   it('should display the Pokémon details correctly', () => {
-    cy.visit('http://localhost:4200/pokemon/1');
+    cy.visit('http://localhost:4200/#/pokemon/1');
 
     cy.get('h1').contains('Bulbasaur');
     cy.get('li').contains('Height: 0.7 m');
