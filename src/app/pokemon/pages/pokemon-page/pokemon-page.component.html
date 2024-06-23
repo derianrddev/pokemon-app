@@ -1,0 +1,35 @@
+@if (pokemon) {
+  <h1 class="text-3xl font-bold text-center mt-10">
+    {{ pokemon.name | titlecase}} <span class="text-gray-400">#{{ pokemon.no }}</span>
+  </h1>
+
+  <div class="flex gap-4 justify-center">
+    <div class="basis-1/3">
+      <img class="rounded-t-lg w-full" [src]="pokemon.image" [alt]="pokemon.name" />
+    </div>
+    <div class="basis-1/3">
+      <ul class="max-w-xs flex flex-col divide-y divide-gray-200 mt-10">
+        <li class="inline-flex items-center gap-x-2 py-3 font-medium text-gray-800">
+          <span class="font-semibold">Height:</span> {{ pokemon.height / 10 }} m
+        </li>
+        <li class="inline-flex items-center gap-x-2 py-3 font-medium text-gray-800">
+          <span class="font-semibold">Weight:</span> {{ pokemon.weight / 10 }} kg
+        </li>
+        <li class="inline-flex items-center gap-x-2 py-3 font-medium text-gray-800">
+          <span class="font-semibold">Abilities:</span> {{ joinAbilities(pokemon.abilities) | titlecase }}
+        </li>
+        <li class="inline-flex items-center gap-x-2 py-3 font-medium text-gray-800">
+          <span class="font-semibold">Types:</span>
+          @for (type of pokemon.types; track type) {
+            <span
+            [ngClass]="getTypeColor(type)"
+              class="text-white text-sm font-medium me-2 px-2.5 py-0.5 rounded"
+            >
+              {{ type | titlecase }}
+            </span>
+          }
+        </li>
+      </ul>
+    </div>
+  </div>
+}

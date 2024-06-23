@@ -1,0 +1,27 @@
+<h1 class="text-3xl font-semibold text-center mt-10">
+  Pokémon Listings
+</h1>
+
+<p class="font-normal text-gray-700 text-center mt-4">This is a list of all Generation 1 Pokémon. There are 151 Pokémon in this generation. Click on the image to see more information.</p>
+
+<ul class="flex justify-center flex-wrap p-10 gap-5">
+  @for (pokemon of pokemons; track pokemon.no) {
+  <li class="max-w-60 bg-white border border-gray-200 rounded-lg shadow">
+    <a [routerLink]="[ '/pokemon', pokemon.no]">
+      <img class="rounded-t-lg w-full" [src]="pokemon.image" [alt]="pokemon.name" />
+    </a>
+    <div class="p-5">
+      <p class="mb-2 text-xl font-bold text-gray-400">#{{ pokemon.no }}</p>
+      <h5 class="mb-2 text-2xl font-bold tracking-tight text-gray-900">{{ pokemon.name | titlecase }}</h5>
+      @for (type of pokemon.types; track type) {
+        <span
+        [ngClass]="getTypeColor(type)"
+          class="text-white text-sm font-medium me-2 px-2.5 py-0.5 rounded"
+        >
+          {{ type | titlecase }}
+        </span>
+      }
+    </div>
+  </li>
+  }
+</ul>
